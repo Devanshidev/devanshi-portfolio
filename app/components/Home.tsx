@@ -33,7 +33,7 @@ const Home = () => {
     transition: {
       duration: 1,
       repeat: Infinity,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   };
 
