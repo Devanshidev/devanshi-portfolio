@@ -48,12 +48,14 @@ const Home = () => {
         <p className="inline-block">
           {line1}
           {displayedText.length <= commaIndex && (
-            <motion.span
-              {...blink}
-              className="text-white font-extralight font-sans"
-            >
-              |
-            </motion.span>
+           <motion.span
+  {...blink}
+  className="text-white font-extralight font-sans"
+  animate={{ opacity: [0, 1] }}
+  transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }} // ✅ valid easing
+>
+  |
+</motion.span>
           )}
         </p>
         <p className="inline-block">
