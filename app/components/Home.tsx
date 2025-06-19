@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, easeInOut } from "framer-motion";
+
 
 const Home = () => {
   const fullText = "Transforming ideas into, engaging digital experiences.";
@@ -48,11 +49,11 @@ const Home = () => {
         <p className="inline-block">
           {line1}
           {displayedText.length <= commaIndex && (
-           <motion.span
+        <motion.span
   {...blink}
   className="text-white font-extralight font-sans"
   animate={{ opacity: [0, 1] }}
-  transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }} // ✅ valid easing
+  transition={{ duration: 1, repeat: Infinity, ease: easeInOut }} 
 >
   |
 </motion.span>
